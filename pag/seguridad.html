@@ -1,1 +1,374 @@
-Hola mundo seguridad
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2N8J2K3N91"></script>
+    <meta charset="utf-8"> 
+
+        <!-- Favicon -->
+        <link href="../img/rv.webp" rel="icon">
+        
+
+        <title>Equipo Nómina| Seguridad y Roles en Base de Datos</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Aprende de base de datos con el equipo de nómica de la UPTYAB" name="title">
+        <meta content="Aprende acerza de la gestión de nómina gracias a la reingeniería del módulo de nómina." name="description">
+        <meta itemprop="image" content="../img/rv.webp">
+
+
+       <!-- <link rel="canonical" href="https://soygabydigital.github.io/g/" title="githubpage">-->
+        <meta content="author" name="equipo_nomina">
+        <meta name="robots" content="index"/>
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="../lib/animate/animate.min.css" rel="stylesheet">
+        <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+   
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            
+            <a href="#home" class="nav-item nav-link active text-secondary" title="home">
+                <img src="../img/rv.png" alt="logo" title="logo">
+                <b>Equipo Nómina</b>
+            </a>
+            <div class="navbar-nav ms-auto py-0">
+                
+                <a href="../index.html" class="nav-item nav-link" title="Quien soy">Nosotros</a>
+                <a href="../index.html" class="nav-item nav-link" title="Para ti">Nuestro Blog</a>
+                <a href="../index.html" class="nav-item nav-link" title="Que hago">Curiosidades</a>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0 header" id="home">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                 <br><br><br>
+                    <h1 class="display-3 mb-3 text-primary">SOMOS <b class="hover-blue">EQUIPO NÓMINA</b></h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">Aprende de seguridad y roles en la de base de datos, firebird, métodos de encriptación, y más...</div>
+                    
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="../img/odoo.webp"  title="Web">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <div id="about">
+        <div id="fondonegro">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
+                 <p>&nbsp; &nbsp; &nbsp;
+                    La seguridad en una base de datos se refiere a las medidas tomadas para proteger la información almacenada en ella 
+                    de accesos no autorizados, modificaciones o eliminaciones. Los roles en una base de datos se refieren a los diferentes 
+                    niveles de acceso y permisos que se otorgan a los usuarios para interactuar con la información almacenada en la base 
+                    de datos. Cada usuario puede tener un rol específico que determina el nivel de acceso y los permisos que se les otorgan.
+                     Los roles pueden incluir administrador, desarrollador, usuario final, entre otros, y se utilizan para controlar quién 
+                     puede ver, editar o eliminar información en la base de datos. <b>El uso adecuado de los roles y la seguridad de la base de
+                      datos son fundamentales para garantizar la integridad, confidencialidad y disponibilidad de la información almacenada 
+                      en ella.</b>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="container-xxl py-6 pb-5">
+            <div class="text-center">
+                <h2 class="display-5 mb-5" id="parati"><b>TIPOS DE CLAVE Y SUS <br> MÉTODOS DE ENCRIPTACIÓN</b> </h2>
+            </div>
+            <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+                <ul>
+                    <li>
+                        <b>Clave Primaria</b> En el modelo relacional de las bases de datos, una clave primaria es una elección específica de un 
+                        conjunto mínimo de columnas que especifican de forma única una fila en una tabla. De manera informal, una clave primaria es 
+                        "qué atributos identifican un registro", y en casos simples constituyen un solo atributo: una identificación única. Más 
+                        formalmente, una clave primaria es una elección de clave candidata (una superclave mínima); cualquier otra clave candidata 
+                        es una clave alternativa<br><br>
+                    </li>
+                    <li>
+                        <b>Clave Candidata:</b>  Una clave candidata, o clave simple, de una base de datos relacional es una superclave mínima. En otras 
+                        palabras, es cualquier conjunto de columnas que tiene una combinación única de valores en cada fila (lo que la convierte en una 
+                        superclave), con la restricción adicional de que eliminar cualquier columna podría producir combinaciones duplicadas de valores 
+                        (lo que la convierte en una superclave mínima). Debido a que una clave candidata es una superclave que no contiene una más pequeña, 
+                        una relación puede tener múltiples claves candidatas, cada una con un número diferente de atributos.<br><br>
+                    </li>
+                    <li>
+                        <b>Superclave:</b>  En el modelo de datos relacionales, una superclave es un conjunto de atributos que identifica de forma única 
+                        cada fila de una relación. Debido a que los valores de superclave son únicos, las filas con el mismo valor de superclave también 
+                        deben tener los mismos valores de atributos no clave. Es decir, los atributos que no son clave dependen funcionalmente de la 
+                        superclave.<br> <br>
+                        El conjunto de todos los atributos es siempre una superclave (la superclave trivial). Las filas en una relación son, por definición, 
+                        únicas, y los duplicados se eliminan después de cada operación, por lo que el conjunto de todos los atributos siempre tiene un valor 
+                        único para cada fila. Una clave candidata (o superclave mínima) es una superclave que no se puede reducir a una superclave más simple 
+                        eliminando un atributo <br><br>
+                    </li>
+
+                    <li>
+                        <b>Clave Externa:</b> Las claves externas son columnas que apuntan a columnas de clave primaria en otras tablas de la base de datos. <br><br>
+                    </li>
+                    <li>
+                        <b>Clave Alternativa:</b>  Una clave alternativa son esencialmente todas las claves de una tabla de datos que no son la clave principal. 
+                        Una vez que se establece la clave principal, todas las demás ahora se consideran claves alternativas.<br><br>
+                    </li>
+                    <li>
+                        <b>Clave Sustituta:</b>  Una clave sustituta es una clave artificial que se crea estrictamente con fines de análisis de datos. A veces 
+                        también se le llama llave sintética o un pseudoclave porque no se deriva de ningún dato de aplicación. En cambio, se utiliza para 
+                        identificar objetos en la base de datos.<br><br>
+                    </li>
+                    <li>
+                        <b>Clave Compuesta:</b> Una clave compuesta es una clave que tiene más de un atributo. Cualquier superclave, clave primaria o clave 
+                        candidata puede ser una clave compuesta siempre que cumpla con el requisito de tener más de un atributo. Al combinar dos o más columnas 
+                        en una tabla en una clave, garantiza que la clave se refiere a una fila específica. Este es el uso principal de claves compuestas.<br><br>
+                    </li>
+                </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-xxl py-6 pb-5">
+            <div class="text-center">
+                <h2 class="display-5 mb-5" id="parati"><b>ROLES (FIREBIRD)</b> </h2>
+            </div>
+            <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+                <p>&nbsp;&nbsp;&nbsp;
+                    Un rol se define a nivel base de datos.
+                </p>
+                <p>&nbsp;&nbsp;&nbsp;
+                    Un usuario está definido a nivel servidor y disponible para cualquier base de datos con sus roles y permisos adecuados.
+                    <br><br>  &nbsp;&nbsp;&nbsp;  
+                    Se puede implementar reglas de seguridad sin utilizar roles, sólo con usuarios definidos en el servidor. Se crea un 
+                    usuario con su password y se le asigna sus permisos en los diferentes objetos de la base de datos,pero si existen 
+                    muchos usuarios se debe realizar esta tarea para todos ellos. Un rol se define en la base de datos y contiene una 
+                    serie de permisos para ese rol, luego se relaciona ese rol con los usuarios del mismo perfi
+                </p>
+
+                <div class="text-center">
+                    <h2 class="display-5 mb-5" id="parati"><b>EJEMPLO</b> </h2>
+                </div>
+
+                <ul class="text-primary">
+                    <li>create user romer password ‘romer’</li>
+                    <li>create rol rolselect</li>
+                    <li>grant select on tabla1 to rolselect</li>
+                    <li>grant rolselect to romer</li>
+                </ul>
+                <div class="text-center">
+                    <h2 class="display-5 mb-5" id="parati"><b>ROLES POSTGRESQL</b> </h2>
+                </div>
+                
+                <p> &nbsp; &nbsp; &nbsp;
+                    Con PostgreSQL, puede crear usuarios y roles con permisos de acceso granulares. Al nuevo usuario o rol se les debe conceder 
+                    selectivamente los permisos necesarios para cada objeto de base de datos. Esto da mucho poder al usuario final, pero al mismo 
+                    tiempo, dificulta potencialmente el proceso de creación de usuarios y roles con los permisos correctos.
+                </p>
+
+                <p> &nbsp; &nbsp; &nbsp;
+                    PostgreSQL le permite conceder permisos directamente a los usuarios de la base de datos. Sin embargo, como práctica recomendada, 
+                    se recomienda crear varios roles con conjuntos específicos de permisos basados en los requisitos de aplicación y acceso. Paso 
+                    seguido, asigne el rol apropiado a cada usuario. Los roles deben utilizarse para aplicar un modelo de privilegios mínimos para 
+                    acceder a objetos de base de datos.
+                </p>
+
+                <b class="text-secondary">Ejemplo:</b> <br><br>
+
+                <p>&nbsp; &nbsp; &nbsp;
+                    El método recomendado para configurar un control de acceso detallado en PostgreSQL es el siguiente:
+                </p>
+
+                <ul>
+                    <li>Utilice el usuario maestro para crear roles por aplicación o caso de uso, como readonly (solo lectura) y readwrite (escritura).</li>
+                    <li>Agregue permisos para permitir que estos roles tengan acceso a varios objetos de base de datos. Por ejemplo, el rol de readonly solo puede ejecutar consultas SELECT.</li>
+                    <li>Conceda a los roles los menos permisos posibles necesarios para la funcionalidad.</li>
+                    <li>Cree nuevos usuarios para cada aplicación o funcionalidad distinta, como app_user (usuario de aplicación) y reporting_user (usuario de reportes).</li>
+                    <li>Asigne los roles aplicables a estos usuarios para otorgarles rápidamente los mismos permisos que el rol. Por ejemplo, conceda el rol readwrite a app_user y conceda el rol de readonly a reporting_user.</li>
+                </ul>
+
+                <p>&nbsp; &nbsp; &nbsp;
+                    En cualquier momento, puede quitar el rol del usuario para revocar los permisos.
+                </p>
+                <p> &nbsp; &nbsp; &nbsp;                
+                    Para crear un usuario de PostgreSQL, utilice la siguiente instrucción SQL:
+                </p>
+                <ul>
+                    <li class="text-primary">CREATE USER myuser WITH PASSWORD 'secret_passwd';</li>
+                </ul>
+                <p>&nbsp; &nbsp; &nbsp;
+                    También puede crear un usuario con la siguiente instrucción SQL:
+                </p>
+                <ul>
+                    <li class="text-primary">CREATE ROLE myuser WITH LOGIN PASSWORD 'secret_passwd';</li>
+                </ul>
+
+                <div class="text-center">
+                    <h2 class="display-5 mb-5" id="parati"><b>ROLES MYSQL</b> </h2>
+                </div>
+                <p> &nbsp; &nbsp; &nbsp;
+                    Un rol es un identificador que engloba un conjunto de permisos.
+                </p>
+                <p> &nbsp; &nbsp; &nbsp;
+                    A partir del Mysql v8 ya disponemos de roles.
+                </p>
+                <p>&nbsp; &nbsp; &nbsp;
+                    En la versión 5.7 lo más parecido lo tenemos en el MysqlWorkBench, donde existen un conjunto de roles 'predefinidos' 
+                    que al pulsar sobre ellos aparecen en la parte derecha los permisos asociados a cada rol.
+                </p>
+                <p> &nbsp; &nbsp; &nbsp;
+                    Si un usuario tiene permisos específicos, aparecerá una entrada 'CUSTOM' en la lista de roles.
+                </p>
+            
+                <b class="text-primary">Ejemplo:</b><br><br>
+                <p>&nbsp; &nbsp; &nbsp;
+                    El proceso para trabajar con roles debería seguir estos pasos:
+                </p>
+
+                <ul>
+                    <li>Crear los roles.</li>
+                    <li>Asignar a cada ROL los permisos correspondientes.</li>
+                    <li>Asignar a cada usuario el/los rol/es correspondientes.</li>
+                    <li>Activar el/los rol/es asignados</li>
+                </ul>
+
+                <b class="text-primary">Veamos un ejemplo:</b><br><br>
+
+                <ul>
+                    <li>CREATE ROLE IF NOT EXISTS mantenimiento_basico,mantenimineto_total,consulta_basica;</li>
+                </ul>
+
+                <div class="text-center">
+                    <h2 class="display-5 mb-5" id="parati"><b>MÉTODOS DE ENCRIPTACIÓN</b> </h2>
+                </div>      
+
+                <p>&nbsp; &nbsp; &nbsp;
+                    Aplicaciones para las claves de SQL Server y las claves de las bases de datos.
+                </p>
+                <p>&nbsp; &nbsp; &nbsp;
+                    SQL Server tiene dos aplicaciones principales para las claves: una clave maestra de servicio (SMK) 
+                    generada en y para una instancia de SQL Server y una clave maestra de base de datos (DMK) usada para 
+                    una base de datos.
+                </p>
+
+                <ul>
+                    <li>
+                        <b>Clave maestra de servicio: </b>La clave maestra de servicio es la raíz de la jerarquía de cifrado de 
+                        SQL Server. El SMK se genera automáticamente la primera vez que se inicia la instancia de SQL Server y se 
+                        usa para cifrar una contraseña de servidor vinculado, credenciales y la clave maestra de base de datos en 
+                        cada base de datos. La SMK se cifra mediante la clave del equipo local y la API de protección de datos de 
+                        Windows (DPAPI). DPAPI usa una clave derivada de las credenciales de Windows de la cuenta de servicio de SQL 
+                        Server y las credenciales del equipo. La clave maestra de servicio solo puede descifrarse con la cuenta de 
+                        servicio en la que se creó o con una entidad de seguridad que tenga acceso a las credenciales del equipo. La 
+                        clave maestra de servicio solo puede abrirla la cuenta de servicio de Windows bajo la que se creó, o una entidad 
+                        de seguridad con acceso al nombre y a la contraseña de la cuenta de servicio. SQL Server usa el algoritmo de 
+                        cifrado AES para proteger la clave maestra de servicio (SMK) y la clave maestra de base de datos (DMK). AES es 
+                        un algoritmo de cifrado más reciente que el algoritmo 3DES empleado en versiones anteriores. Después de actualizar 
+                        una instancia del motor de base de datos a SQL Server se debe volver a generar SMK y DMK para actualizar las claves 
+                        maestras a AES. <br><br>
+                    </li>
+                    <li>
+                        <b>Clave maestra de base de datos:</b> La clave maestra de base de datos es una clave simétrica que se utiliza para 
+                        proteger las claves privadas de certificados y las claves asimétricas presentes en la base de datos. También se puede 
+                        usar para cifrar los datos, pero tiene limitaciones de longitud que hacen que sea menos práctico para los datos que el 
+                        uso de una clave asimétrica. Para habilitar el descifrado automático de la clave maestra de base de datos, se cifra una 
+                        copia de la clave mediante la SMK. Esta copia se almacena en la base de datos donde se utiliza y en la base de datos del 
+                        Ssistema master. <br> <br>
+
+                        La copia de la DMK almacenada en la base de datos del sistema master se actualiza automáticamente siempre que se modifica 
+                        la DMK. Sin embargo, este comportamiento predeterminado se puede cambiar con la opción DROP ENCRYPTION BY SERVICE MASTER KEY 
+                        de la instrucción ALTER MASTER KEY. Para abrir una DMK que no se haya cifrado con la clave maestra de servicio, debe utilizarse 
+                        la instrucción OPEN MASTER KEY y una contraseña. <br> <br>
+                    </li>
+                    <li>
+                        <b>Administrar las claves de SQL Server y las claves de las bases de datos:</b> La administración de las claves de cifrado 
+                        consiste en crear nuevas claves de base de datos, crear una copia de seguridad de las claves del servidor y de las bases de 
+                        datos, y saber cuándo y cómo se deben restaurar, eliminar o cambiar dichas claves.
+                    </li> 
+                </ul>
+                  
+
+        </div>
+    </section>
+
+<br><br><br><br>
+
+
+          
+   
+    <!-- Copyright Start -->
+    <div class="container-fluid text-white py-4" id="fondonegro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" id="date">                     
+                    </div><br>
+                    &nbsp; María Alvarado. C.I. V.- 28.398.332 
+                    &nbsp; Gaudys Tovar C.I. V.- 29.693.322
+                    &nbsp; Saulo Perdomo C.I. V.- 
+                    &nbsp; Gabriel Laya C.I. V.-
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <script>
+        var today = new Date();
+        var year = today.getFullYear();
+        document.getElementById('date').innerHTML = 'Equipo Nómina. &nbsp;&nbsp; ' + year;
+
+    </script>
+    <!-- Back to Top -->
+    <a href="#" id="a-top" class="btn btn-lg btn-secondary btn-lg-square back-to-top" title="top"><b></b><i class="bi bi-arrow-up"></i></b></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/typed/typed.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+
+
+<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"5c4be6a60b7424ba85e3862716febad3"})});</script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+
+</html>
