@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2N8J2K3N91"></script>
+    <meta charset="utf-8"> 
+
+        <!-- Favicon -->
+        <link href="../img/rv.webp" rel="icon">
+        
+
+        <title>Equipo Nómina| Normalización en Base de Datos</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Aprende de base de datos con el equipo de nómica de la UPTYAB" name="title">
+        <meta content="Aprende acerza de la gestión de nómina gracias a la reingeniería del módulo de nómina." name="description">
+        <meta itemprop="image" content="../img/rv.webp">
+
+
+       <!-- <link rel="canonical" href="https://soygabydigital.github.io/g/" title="githubpage">-->
+        <meta content="author" name="equipo_nomina">
+        <meta name="robots" content="index"/>
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="../lib/animate/animate.min.css" rel="stylesheet">
+        <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+   
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            
+            <a href="#home" class="nav-item nav-link active text-secondary" title="home">
+                <img src="../img/rv.png" alt="logo" title="logo">
+                <b>Equipo Nómina</b>
+            </a>
+            <div class="navbar-nav ms-auto py-0">
+                
+                <a href="../index.html" class="nav-item nav-link" title="Quien soy">Nosotros</a>
+                <a href="../index.html" class="nav-item nav-link" title="Para ti">Nuestro Blog</a>
+                <a href="../index.html" class="nav-item nav-link" title="Que hago">Curiosidades</a>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0 header" id="home">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                 <br><br><br>
+                    <h1 class="display-3 mb-3 text-primary">SOMOS <b class="hover-blue">EQUIPO NÓMINA</b></h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">Aprende de normalización de base de datos, Formas Normales, Ejemplo..</div>
+                    
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="../img/odoo.webp"  title="Web">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <div id="about">
+        <div id="fondonegro">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
+                 <p>&nbsp; &nbsp; &nbsp;
+                    Las formas normales son reglas que se aplican en el diseño de bases de datos relacionales para garantizar 
+                    que los datos estén organizados de manera eficiente y se eliminen las redundancias innecesarias. <b> A continuación 
+                    se presentan las reglas de las tres formas normales principales:</b>
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="container-xxl py-6 pb-5">
+            <div class="text-center">
+                <h2 class="display-5 mb-5" id="parati"><b>FORMAS NORMALES</b> </h2>
+            </div>
+            <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+                <ul>
+                    <li>
+                        <b>Primera Forma Normal (1FN:)</b> cada atributo o campo de una tabla debe contener un solo valor y no una lista de valores 
+                        separados por comas u otro separador. Además, cada fila o registro debe tener una clave única que lo identifique. <br><br>
+                    </li>
+                    <li>
+                        <b>Segunda Forma Normal (2FN):</b> una tabla está en 2FN si está en 1FN y todos sus atributos no clave dependen completamente 
+                        de la clave primaria. En otras palabras, no debe haber dependencias parciales. Si un atributo no clave depende solo de una 
+                        parte de la clave primaria, se debe separar en otra tabla. <br><br>
+                    </li>
+                    <li>
+                        <b>Tercera Forma Normal (3FN):</b> una tabla está en 3FN si está en 2FN y todos sus atributos no clave no dependen de otros 
+                        atributos no clave. En otras palabras, no debe haber dependencias transitivas. Si un atributo no clave depende de otro 
+                        atributo no clave, se debe separar en otra tabla. <br> <br>
+                    </li>
+                </ul>
+
+                <strong>&nbsp; &nbsp; &nbsp; 
+                    Además, hay otras formas normales, como la cuarta forma normal (4FN), la forma normal de Boyce-Codd (BCNF) y la forma normal de 
+                    dominio-key (DKNF), que se utilizan para garantizar una mayor normalización y evitar problemas de redundancia y anormalidad de 
+                    datos en la base de datos. Cada una de estas formas normales tiene sus propias reglas y requisitos específicos que se deben cumplir 
+                    para garantizar una base de datos bien diseñada y eficiente.
+                </strong>
+
+                <strong style="padding-top: 2em;">&nbsp; &nbsp; &nbsp; 
+                    Además de las tres formas normales principales (1FN, 2FN y 3FN) hay otras formas normales que se utilizan en el diseño de bases de 
+                    datos para garantizar la integridad y la eficiencia de los datos. A continuación se describen brevemente estas formas normales 
+                    adicionales:
+                </strong>
+
+                <ul style="padding-top: 2em;">
+                    <li>
+                        <b>Cuarta Forma Normal (4FN):</b> Una tabla está en 4FN si no tiene múltiples valores multivaluados (atributos que pueden tener 
+                        múltiples valores) y no tiene dependencias de varias claves (relaciones de muchos a muchos). La 4NF se enfoca en reducir redundancias 
+                        y consiste en dividir una tabla en dos o más tablas, de tal manera que los datos que se relacionan estén en la misma tabla y las tablas 
+                        que no tienen una relación directa se separen.
+                    </li>
+                    <li>
+                        <b>Quinta Forma Normal (5FN):</b> Una tabla está en 5FN si está en 4FN y no hay pérdida de información cuando se descompone en dos o
+                         más tablas. La 5NF se enfoca en eliminar redundancias adicionales y consiste en descomponer una tabla en otras más pequeñas para 
+                         reducir la duplicación de datos.
+                    </li>
+                    <li>
+                        <b>Sexta Forma Normal (6NF):</b> Esta forma normal se enfoca en la representación de hechos temporales, es decir, la historia de 
+                        una base de datos a lo largo del tiempo. La 6NF requiere que cada hecho sea registrado de manera independiente, incluyendo el 
+                        momento en que se produjo, y que se utilicen claves temporales para representar la información histórica.
+                    </li>
+                </ul>
+
+                <p>&nbsp; &nbsp; &nbsp; 
+                    Cada forma normal tiene sus propias reglas y requisitos específicos que deben cumplirse para garantizar una base de datos bien 
+                    diseñada y eficiente. Es importante tener en cuenta que, aunque la normalización de una base de datos puede mejorar su eficiencia 
+                    y consistencia, también puede aumentar su complejidad y dificultad de manejo. Por lo tanto, el diseño de la base de datos debe 
+                    equilibrar la normalización con la facilidad de uso y la eficiencia.
+                </p>
+      
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container-xxl py-6 pb-5">
+            <div class="text-center">
+                <h2 class="display-5 mb-5" id="parati"><b>EJEMPLO PRÁCTICO</b> </h2>
+            </div>
+            <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+                <p>&nbsp;&nbsp;&nbsp;
+                    Supongamos que estamos diseñando una base de datos para una empresa que tiene un sistema de nómina y un sistema de presupuesto. 
+                    Además, la empresa maneja información sobre sus terceros, como proveedores y clientes, y tiene un módulo de configuración para 
+                    definir parámetros de la aplicación. Podemos modelar esta base de datos utilizando varias tablas.
+                </p>
+                <ul>
+                    <li>
+                        <b>Primera Forma Normal (1FN)</b><br>
+                        Para cumplir con la 1FN, cada atributo debe contener un solo valor y cada registro debe tener una clave única. 
+                        Podemos crear la siguiente tabla para almacenar la información de los empleados de la empresa: <br><br>
+
+                        <strong> Tabla Empleados</strong><br><br>
+
+                        <i>IDEmpleado (Clave primaria) Nombre Apellido Puesto Salario</i><br><br>
+
+                        Aquí, el IDEmpleado es la clave primaria que identifica de forma única a cada empleado. La tabla cumple con la 
+                        1FN ya que cada atributo contiene un solo valor y cada registro tiene una clave única. <br><br>
+
+                    </li>
+
+                    <li>
+                        <b>Segunda Forma Normal (2FN)</b><br>
+                        Para cumplir con la 2FN, cada atributo que no sea clave debe depender completamente de la clave primaria. Podemos 
+                        crear otra tabla para almacenar la información de los departamentos de la empresa: <br><br>
+
+                        <strong> Tabla Departamentos</strong><br><br>
+
+                        <i>IDDepartamento (Clave primaria) Nombre Descripcion</i><br><br>
+
+                        Aquí, el IDDepartamento es la clave primaria que identifica de forma única a cada departamento. La tabla cumple con la 
+                        2FN ya que los atributos no clave (Nombre y Descripcion) dependen completamente de la clave primaria (IDDepartamento). <br><br>
+
+                    </li>
+
+                    <li>
+                        <b>Tercera Forma Normal (3FN)</b><br>
+                        Para cumplir con la 3FN, no debe haber dependencias transitivas entre los atributos no clave. Podemos crear una tabla para almacenar 
+                        la información de los salarios de los empleados en un periodo determinado: <br><br>
+
+                        <strong> Tabla Salarios</strong><br><br>
+
+                        <i>IDSalario (Clave primaria) IDEmpleado (Clave foránea de la tabla Empleados) IDSemana (Clave foránea de la tabla Semanas) Monto</i><br><br>
+
+                        Aquí, el IDSalario es la clave primaria que identifica de forma única a cada registro de salario. El IDEmpleado y el IDSemana son 
+                        claves foráneas que relacionan la tabla de salarios con las tablas de empleados y semanas, respectivamente. La tabla cumple con 
+                        la 3FN ya que no hay dependencias transitivas entre los atributos no clave (IDEmpleado, IDSemana y Monto).<br><br>
+
+                    </li>
+                    <li>
+                        <b>Cuarta Forma Normal (4FN)</b><br>
+                        Para cumplir con la 4FN, no debe haber múltiples valores multivaluados en una tabla. Podemos crear una tabla para almacenar la 
+                        información de los departamentos a los que pertenece cada empleado: <br><br>
+
+                        <strong> Tabla EmpleadosDepartamentos</strong><br><br>
+
+                        <i>IDEmpleado (Clave foránea de la tabla Empleados) IDDepartamento (Clave foránea de la tabla Departamentos)</i><br><br>
+
+                        Aquí, la tabla EmpleadosDepartamentos tiene dos claves foráneas, que relacionan la tabla de empleados con la tabla de departamentos. 
+                        La tabla cumple con la 4FN ya que no tiene múltiples valores multivaluados.<br><br>
+
+                    </li>
+
+                    <li>
+                        <b>Quinta Forma Normal (5FN)</b><br>
+                        Para cumplir con la 5FN, la tabla debe estar en la 4FN y no debe haber pérdida de información cuando se descompone en dos o más 
+                        tablas. Podemos crear una tabla para almacenar la información de los presupuestos de cada departamento: <br><br>
+
+                        <strong> Tabla PresupuestosDepartamentos</strong><br><br>
+
+                        <i>IDPresupuesto (Clave primaria) IDDepartamento (Clave foránea de la tabla Departamentos) Año Monto</i><br><br>
+
+                        Aquí, el IDPresupuesto es la clave primaria que identifica de forma única a cada presupuesto, y el IDDepartamento es una clave 
+                        foránea que relaciona la tabla de presupuestos con la tabla de departamentos. La tabla cumple con la 5FN ya que está en la 4FN 
+                        y no hay pérdida de información al descomponerla en dos o más tablas.<br><br>
+
+                    </li>
+
+                    <li>
+                        <b>Sexta Forma Normal (6FN)</b><br>
+                        Para cumplir con la 6FN, la tabla debe estar en la 5FN y no debe haber dependencias funcionales entre las claves. Podemos crear una 
+                        tabla para almacenar la información de los terceros que interactúan con la empresa: <br><br>
+
+                        <strong> Tabla Terceros</strong><br><br>
+
+                        <i>IDTercero (Clave primaria) TipoTercero Nombre Direccion Telefono</i><br><br>
+
+                        Aquí, el IDTercero es la clave primaria que identifica de forma única a cada tercero, y el TipoTercero es un atributo que indica 
+                        si se trata de un proveedor o un cliente. La tabla cumple con la 6FN ya que está en la 5FN y no hay dependencias funcionales 
+                        entre las claves.<br><br>
+
+                    </li>
+                </ul>
+                <p>&nbsp; &nbsp;  &nbsp;
+                    En resumen, siguiendo las reglas de las formas normales podemos diseñar una base de datos eficiente y bien estructurada, 
+                    que <b>garantice la integridad de la información y facilite la manipulación de los datos de una empresa o cualquier otro tipo 
+                    de organización.</b>
+                </p>
+
+                  
+
+        </div>
+    </section>
+
+<br><br><br><br>
+
+
+          
+   
+    <!-- Copyright Start -->
+    <div class="container-fluid text-white py-4" id="fondonegro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" id="date">                     
+                    </div><br>
+                    &nbsp; María Alvarado. C.I. V.- 28.398.332 
+                    &nbsp; Gaudys Tovar C.I. V.-
+                    &nbsp; Saulo Perdomo C.I. V.- 
+                    &nbsp; Gabriel Laya C.I. V.-
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <script>
+        var today = new Date();
+        var year = today.getFullYear();
+        document.getElementById('date').innerHTML = 'Equipo Nómina. &nbsp;&nbsp; ' + year;
+
+    </script>
+    <!-- Back to Top -->
+    <a href="#" id="a-top" class="btn btn-lg btn-secondary btn-lg-square back-to-top" title="top"><b></b><i class="bi bi-arrow-up"></i></b></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="lib/wow/wow.min.js"></script>
+    <script src="lib/easing/easing.min.js"></script>
+    <script src="lib/waypoints/waypoints.min.js"></script>
+    <script src="lib/typed/typed.min.js"></script>
+    <script src="lib/counterup/counterup.min.js"></script>
+    <script src="lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="js/main.js"></script>
+
+
+<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"5c4be6a60b7424ba85e3862716febad3"})});</script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+
+</html>
