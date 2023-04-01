@@ -174,6 +174,234 @@
         </div>
     </section>
 
+    <section>
+        <div class="container-xxl py-6 pb-5">
+            <div class="text-center">
+                <h2 class="display-5 mb-5" id="parati"><b>DML</b> </h2>
+            </div>
+            <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+                
+                <p>&nbsp;&nbsp;&nbsp;
+                    Utilizando instrucciones de SQL, <b>permite a los usuarios introducir datos para posteriormente 
+                    realizar tareas de consultas o modificación de los datos que contienen las Bases de Datos.</b>
+                    <br><br>&nbsp;&nbsp;&nbsp;
+                    Los elementos que se utilizan para manipular los datos, son los siguientes:
+                </p>
+                <ul class="text-primary">
+                    <li>SELECT, esta sentencia se utiliza para realizar consultas sobre los datos.</li>
+                    <li>INSERT, con esta instrucción podemos insertar los valores en una base de datos.</li>
+                    <li>UPDATE, sirve para modificar los valores de uno o varios registros.</li>
+                    <li>DELETE, se utiliza para eliminar las filas de una tabla.</li>
+                </ul>
+
+        </div>
+    </section>
+
+    <section>
+        <div class="container-xxl py-6 pb-5">
+            <div class="text-center">
+                <h2 class="display-5 mb-5" id="parati"><b>DDL</b> </h2>
+            </div>
+            <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+
+                <p>&nbsp;&nbsp;&nbsp;
+                    DDL (lenguaje de definición de datos, por sus siglas en inglés) es un lenguaje informático que 
+                    <b> sirve para alterar y modificar datos dentro de una base de datos.</b> En particular, DDL consta de 
+                    comandos que pueden modificar estructuras, tablas y otros formatos de organización. "Create", 
+                    "truncate", "alter" y "drop" son los comandos DDL más utilizados; por lo general, se asocian 
+                    con la modificación de tablas de una base de datos.
+                </p>
+
+                <p>&nbsp;&nbsp;&nbsp;
+                    <b>Procedimiento Almacenado:</b>
+                </p>
+                <p>&nbsp;&nbsp;&nbsp;
+                    Un procedimiento almacenado, se puede definir como un programa, procedimiento ó función, el cual 
+                    está almacenado en la base de datos y listo para ser usado.
+                    <br><br>&nbsp;&nbsp;&nbsp;
+                    Existen dos ventajas evidentes al utilizar procedimientos almacenados en nuestro sistema:
+                </p>
+
+                <ul class="text-primary">
+                    <li>
+                        La ejecución del procedimiento ocurre en el servidor de bases de datos. Esto probablemente 
+                        aumentará el rendimiento de nuestra aplicación al no tenerse que mandar datos entre el cliente y 
+                        el servidor, y no tener que procesar resultados intermedios en el cliente para obtener el resultado 
+                        final.
+                    </li>
+                    <li>
+                        Al tener la lógica de la aplicación implementada en la base de datos no tendremos que implantarla en 
+                        los clientes, con el consiguiente ahorro de líneas de código redundante y complejidad.
+                    </li>
+                </ul>
+
+                <p>&nbsp;&nbsp;&nbsp;
+                    Si tenemos diferentes tipos de clientes implementados en diferentes sistemas o lenguajes de programación 
+                    y accediendo a la misma base de datos, no tendremos que programar la misma lógica en todos, al estar está 
+                    disponible en la base de datos. Tendremos una API a la lógica de la aplicación lista para usarse desde 
+                    diferentes clientes.
+                </p>
+
+            </div>
+        </section>
+
+        <section>
+            <div class="container-xxl py-6 pb-5">
+                <div class="text-center">
+                    <h2 class="display-5 mb-5" id="parati"><b>PARÁMETROS</b> </h2>
+                </div>
+                <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+                    
+                    <p>&nbsp;&nbsp;&nbsp;
+                        Los procedimientos almacenados pueden recibir y devolver información; para ello se emplean parámetros, 
+                        de entrada y salida, respectivamente.
+                    </p>
+
+                    <p>
+                        <b>Parámetros de Entrada:</b>
+                    </p>
+
+                    <p>&nbsp;&nbsp;&nbsp;
+                        Los parámetros de entrada posibilitan pasar información a un procedimiento. 
+                        <br><br>&nbsp;&nbsp;&nbsp;
+                        Para que un procedimiento almacenado admita parámetros de entrada se deben declarar variables 
+                        como parámetros al crearlo. 
+                        <br><br>&nbsp;&nbsp;&nbsp;
+                        Los parámetros se definen luego del nombre del procedimiento, comenzando el nombre con un signo 
+                        arroba (@). Los parámetros son locales al procedimiento, es decir, existen solamente dentro del 
+                        mismo. Pueden declararse varios parámetros por procedimiento, se separan por comas.
+                        <br><br>&nbsp;&nbsp;&nbsp;
+                        Cuando el procedimiento es ejecutado, deben explicitarse valores para cada uno de los parámetros 
+                        (en el orden que fueron definidos), a menos que se haya definido un valor por defecto, en tal caso, 
+                        pueden omitirse. Pueden ser de cualquier tipo de dato (excepto cursor).
+                        <br><br>&nbsp;&nbsp;&nbsp;
+                        Luego de definir un parámetro y su tipo, opcionalmente, se puede especificar un valor por defecto; 
+                        tal valor es el que asume el procedimiento al ser ejecutado si no recibe parámetros. Si no se coloca 
+                        valor por defecto, un procedimiento definido con parámetros no puede ejecutarse sin valores para 
+                        ellos. El valor por defecto puede ser "null" o una constante, también puede incluir comodines si el procedimiento emplea "like".
+                    </p>
+
+                    <p>
+                        <b>Parámetros de Salida:</b>
+                    </p>
+
+                    <p>&nbsp;&nbsp;&nbsp;
+                        Dijimos que los procedimientos almacenados pueden devolver información; para ello se emplean 
+                        parámetros de salida. El valor se retorna a quien realizó la llamada con parámetros de salida. 
+                        Para que un procedimiento almacenado devuelva un valor se debe declarar una variable con la 
+                        palabra clave "output" al crear el procedimiento.
+                        <br><br>&nbsp;&nbsp;&nbsp; 
+                        Los parámetros de salida pueden ser de cualquier tipo de datos, excepto text, ntext e image
+                        <br><br>&nbsp;&nbsp;&nbsp;
+                        Declaramos una variable para guardar el valor devuelto por el procedimiento; ejecutamos el 
+                        procedimiento enviándole 2 valores y mostramos el resultado.
+                        <br><br>&nbsp;&nbsp;&nbsp;
+                        La instrucción que realiza la llamada al procedimiento debe contener un nombre de variable para 
+                        almacenar el valor retornado.
+                    </p>
+
+                    <p>
+                        <b>Referencias a los Procedimientos:</b>
+                    </p>
+
+                    <p>&nbsp;&nbsp;&nbsp;
+                        Los procedimientos almacenados se invocan desde la sentencia CALL en la que se hace referencia a 
+                        ellos mediante un nombre calificado (esquema y nombre de procedimiento almacenado), seguido de una 
+                        lista de argumentos entre paréntesis. También se puede invocar un procedimiento almacenado sin el 
+                        nombre de esquema, lo que da como resultado una elección de posibles procedimientos almacenados en 
+                        diferentes esquemas con el mismo número de parámetros.
+                        <br><br>&nbsp;&nbsp;&nbsp;                  
+                        Cada parámetro pasado al procedimiento almacenado se puede componer de una variable host, marcador 
+                        de parámetro, expresión o NULL. Las siguientes son restricciones para los parámetros de procedimientos 
+                        almacenados:
+                        <br><br>&nbsp;&nbsp;&nbsp;
+                    </p>
+
+                    <ul class="text-primary">
+                        <li>
+                            Los parámetros OUT e INOUT deben ser variables host.
+                        </li>
+                        <li>
+                            Los valores NULL no se pueden pasar a procedimientos almacenados Java™ 
+                            a menos que el tipo de datos SQL se correlacione con un tipo de clase Java.
+                        </li>
+                        <li>
+                            Los NULL no se pueden pasar a los procedimientos almacenados de PARAMETER STYLE GENERAL.
+                        </li>
+                    </ul>
+
+                    <p>&nbsp;&nbsp;&nbsp;
+                        La posición de los argumentos es importante y debe ajustarse a la definición de procedimiento almacenado 
+                        para que la semántica sea correcta. Tanto la posición de los argumentos como la definición de procedimiento 
+                        almacenado deben ajustarse al propio cuerpo del procedimiento almacenado. El gestor de bases de datos no 
+                        intenta reorganizar los argumentos para que se ajusten mejor a la definición de procedimiento almacenado y 
+                        el gestor de bases de datos no entiende la semántica de los parámetros individuales del procedimiento almacenado.
+                    </p>
+
+                    <p>
+                        <b>Procedimientos de Llamada:</b>
+                    </p>
+
+                    <p>&nbsp;&nbsp;&nbsp;
+                        Una vez completadas las actividades necesarias para crear un procedimiento (también denominado procedimiento 
+                        almacenado), se puede invocar un procedimiento utilizando la sentencia CALL. La sentencia CALL es una sentencia 
+                        SQL que permite la invocación de procedimiento, el paso de parámetros al procedimiento y la recepción de parámetros 
+                        devueltos del procedimiento.
+                    </p>
+
+                    <p>
+                        <b>Valor en un procedimiento almacenado:</b>
+                    </p>
+                    <p>&nbsp;&nbsp;&nbsp;
+                        Puede especificar el nombre de un procedimiento almacenado que se ejecutará antes o después de cargar 
+                        la base de datos. Los procedimientos almacenados anteriores a la carga se pueden utilizar para llevar 
+                        a cabo tareas como por ejemplo descartar índices y activar la opción de copia masiva de la base de 
+                        datos.
+                        <br><br>&nbsp;&nbsp;&nbsp;
+                        Los procedimientos almacenados posteriores a la carga se pueden utilizar para desactivar la opción 
+                        de copia masiva y volver a crear los índices. Para obtener una descripción detallada de cómo grabar 
+                        un procedimiento almacenado, consulte la documentación de SQL Server.
+                        <br><br>&nbsp;&nbsp;&nbsp;
+                        El nombre del procedimiento almacenado se indica como el valor de la propiedad de etapa Procedimiento 
+                        almacenado anterior a la carga o Procedimiento almacenado posterior a la carga. Al igual que para 
+                        indicar el nombre de un procedimiento almacenado, también puede incluir valores de parámetros. Para 
+                        especificar parámetros para el procedimiento almacenado, utilice el formato siguiente en el campo 
+                        Valor del separador Propiedades:
+                    </p>
+
+                    <ul class="text-primary">
+                        <li>nombre_procedimiento P1, P2, P3, ..., Pn</li>
+                        <li>nombre_procedimiento es el nombre del procedimiento almacenado.</li>
+                        <li>P1...Pn son los valores de parámetros, en el orden que los espera el procedimiento almacenado. Observe que los valores de serie deben escribirse entre comillas.</li>
+                    </ul>
+
+                    <p>&nbsp;&nbsp;&nbsp;
+                        Si desea que se devuelvan mensajes de un procedimiento almacenado y grabarlos en el archivo de registro de 
+                        trabajos, puede utilizar los parámetros de salida DSSeverity y DSMessage. Estos parámetros devuelven mensajes 
+                        al archivo de registro de trabajos con el nivel de gravedad adecuado. El tipo de mensaje grabado en el archivo 
+                        de registro de trabajos depende del valor que devuelva el parámetro DSSeverity:
+                    </p>
+                    <ul class="text-primary">
+                        <li>
+                            Valor de retorno 0. No se graba nada.
+                        </li>
+                        <li>
+                            Valor de retorno 1. Se graba un mensaje informativo.
+                        </li>
+                        <li>
+                            Valor de retorno 2. Se graba un mensaje de aviso.
+                        </li>
+                        <li>
+                            Valor de retorno 3. Se graba un mensaje muy grave. El trabajo de InfoSphere DataStage se 
+                            termina anormalmente y se hace caso omiso de los valores de retorno del procedimiento almacenado, 
+                            que no sean los parámetros de salida que espera InfoSphere DataStage.
+                        </li>
+
+                    </ul>
+
+            </div>
+        </section>
+
 <br><br><br><br>
 
 
@@ -187,8 +415,8 @@
                     </div><br>
                     &nbsp; María Alvarado. C.I. V.- 28.398.332 
                     &nbsp; Gaudys Tovar C.I. V.- 29.693.322
-                    &nbsp; Saulo Perdomo C.I. V.- 
-                    &nbsp; Gabriel Laya C.I. V.-
+                    &nbsp; Saulo Perdomo C.I. V.- 27.012395
+                    &nbsp; Gabriel Laya C.I. V.- 27.967.514
                 </div>
             </div>
         </div>

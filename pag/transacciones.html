@@ -1,1 +1,237 @@
-Hola Mundo Transacciones
+<!DOCTYPE html>
+<html lang="en">
+<head>    
+<!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-2N8J2K3N91"></script>
+    <meta charset="utf-8"> 
+
+        <!-- Favicon -->
+        <link href="../img/rv.webp" rel="icon">
+        
+
+        <title>Equipo Nómina| Relaciones en Base de Datos</title>
+        <meta content="width=device-width, initial-scale=1.0" name="viewport">
+        <meta content="Aprende de base de datos con el equipo de nómina de la UPTYAB" name="title">
+        <meta content="Aprende acerza de la gestión de nómina gracias a la reingeniería del módulo de nómina." name="description">
+        <meta itemprop="image" content="../img/rv.webp">
+
+
+       <!-- <link rel="canonical" href="https://soygabydigital.github.io/g/" title="githubpage">-->
+        <meta content="author" name="equipo_nomina">
+        <meta name="robots" content="index"/>
+        <!-- Google Web Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet"> 
+
+        <!-- Icon Font Stylesheet -->
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.0/css/all.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.4.1/font/bootstrap-icons.css" rel="stylesheet">
+
+        <!-- Libraries Stylesheet -->
+        <link href="../lib/animate/animate.min.css" rel="stylesheet">
+        <link href="../lib/lightbox/css/lightbox.min.css" rel="stylesheet">
+        <link href="../lib/owlcarousel/assets/owl.carousel.min.css" rel="stylesheet">
+
+        <!-- Customized Bootstrap Stylesheet -->
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+
+        <!-- Template Stylesheet -->
+        <link href="../css/style.css" rel="stylesheet">
+
+</head>
+
+<body data-bs-spy="scroll" data-bs-target=".navbar" data-bs-offset="51">
+   
+    <!-- Navbar Start -->
+    <nav class="navbar navbar-expand-lg bg-white navbar-light fixed-top shadow py-lg-0 px-4 px-lg-5 wow fadeIn" data-wow-delay="0.1s">
+
+        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between py-4 py-lg-0" id="navbarCollapse">
+            
+            <a href="#home" class="nav-item nav-link active text-secondary" title="home">
+                <img src="../img/rv.png" alt="logo" title="logo">
+                <b>Equipo Nómina</b>
+            </a>
+            <div class="navbar-nav ms-auto py-0">
+                
+                <a href="../index.html" class="nav-item nav-link" title="Quien soy">Nosotros</a>
+                <a href="../index.html" class="nav-item nav-link" title="Para ti">Nuestro Blog</a>
+                <a href="../index.html" class="nav-item nav-link" title="Que hago">Curiosidades</a>
+
+            </div>
+        </div>
+    </nav>
+    <!-- Navbar End -->
+
+
+    <!-- Header Start -->
+    <div class="container-fluid bg-light my-6 mt-0 header" id="home">
+        <div class="container">
+            <div class="row g-5 align-items-center">
+                <div class="col-lg-6 py-6 pb-0 pt-lg-0">
+                 <br><br><br>
+                    <h1 class="display-3 mb-3 text-primary">SOMOS <b class="hover-blue">EQUIPO NÓMINA</b></h1>
+                    <h2 class="typed-text-output d-inline"></h2>
+                    <div class="typed-text d-none">Aprende de relaciones de base de datos, Nomenclatura de relación,, parámetros y normas.</div>
+                    
+                </div>
+                <div class="col-lg-6">
+                    <img class="img-fluid" src="../img/odoo.webp"  title="Web">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Header End -->
+
+    <div id="about">
+        <div id="fondonegro">
+            <div class="col-lg-12 wow fadeInUp" data-wow-delay="0.5s">
+                 <p>
+                    Una transacción de base de datos es un <b>área única de la base de datos donde se llevan a 
+                    cabo múltiples operaciones de datos y se escriben como un todo.</b>
+                    <br><br>
+                    Estas operaciones pueden ser operaciones de <b>creación, lectura, actualización o eliminación.</b>
+                    <br><br>
+                    Durante el proceso de una transacción, <b> la base de datos se encuentra en un estado inconsistente 
+                    porque hay operaciones en curso que están realizando cambios en la base de datos.</b> La base de 
+                    datos vuelve a un estado más coherente cuando se han confirmado las operaciones.
+                    <br><br>
+                    Para que una transacción sea exitosa, significa que todas las operaciones realizadas han sido 
+                    comprometidas.
+                    <br><br>
+                    Las transacciones de la base de datos <b>son muy importantes para garantizar la coherencia de su 
+                    base de datos cuando se realizan varias operaciones al mismo tiempo.</b> También le brinda una forma 
+                    de recuperar los cambios que pueden haber ocurrido debido a la falla o mal uso accidental de una 
+                    operación.
+                </p>
+            </div>
+        </div>
+    </div>
+
+
+    <section>
+        <div class="container-xxl py-6 pb-5">
+            <div class="text-center">
+                <h2 class="display-5 mb-5" id="parati"><b>PROPIEDADES ACID DE LAS TRANSACCIONES</b> </h2>
+            </div>
+            <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+                <p>&nbsp; &nbsp; &nbsp;
+                    <b>ACID</b> es un acrónimo que significa Atomicidad, Consistencia, Aislamiento y Durabilidad. 
+                    Repasemos cada término para comprender cómo se relacionan con las transacciones.
+                </p>
+                <ul class="text-primary">
+                    <li>
+                        <b>Atomicidad:</b> La atomicidad en una transacción de base de datos significa que todos los 
+                        cambios realizados durante esa transacción se tratan como un "paquete" de cambios. Esto significa 
+                        que cuando intenta modificar su base de datos, todos los cambios ocurren al mismo tiempo o ninguno 
+                        de ellos ocurre en absoluto.
+                    </li>
+                    <li>
+                        <b>Consistencia:</b> La coherencia en las bases de datos significa que los datos almacenados en la 
+                        base de datos están siempre en un estado válido y coherente. Por ejemplo, si la base de datos contiene 
+                        restricciones, como claves primarias, claves externas, etc., siempre debe cumplir con las reglas que 
+                        rodean la restricción.
+                    </li>
+                    <li>
+                        <b>Aislamiento:</b> La capacidad de múltiples transacciones para ejecutarse sin interferir entre sí 
+                        se conoce como Aislamiento. El nivel de aislamiento de una transacción determina cómo los cambios 
+                        realizados por esa transacción son visibles para otras transacciones.
+                    </li>
+                    <li>
+                        <b>Durabilidad: </b> La durabilidad garantiza que sus datos permanezcan seguros, incluso en caso de 
+                        circunstancias imprevistas. Cuando se confirma una transacción, sus cambios deben permanecer en la base de 
+                        datos, incluso si experimenta un mal funcionamiento o un corte de energía.
+                    </li>
+                </ul>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-xxl py-6 pb-5">
+            <div class="text-center">
+                <h2 class="display-5 mb-5" id="parati"><b>¿CÓMO AFECTA NO UTILIZAR CORRECTAMENTE ACID?</b> </h2>
+            </div>
+            <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+                <ul>
+                    <li>
+                       <b>Dirty reads (Lecturas sucias):</b>  Es el problema más importante de todos. Supone que las transacciones en curso 
+                       puedan leer el resultado de otras transacciones aún no confirmadas. Por ejemplo, vamos a suponer que tenemos dos 
+                       transacciones activas (A y B). Inicialmente la transacción A lee un valor X de una tabla que, por ejemplo, es 0. Durante 
+                       dicha transacción el valor de X se cambia a 10, pero aún la transacción no se ha cometido, por lo que en la tabla X = 0. 
+                       Ahora la transacción B accede al valor X y obtiene ¡¡X = 10!! un valor que está usando A y que aún no se ha cometido. 
+                       Supongamos que ahora se anula la transacción A. El resultado sería X = 0 en la tabla y X = 10 en la transacción B por 
+                       lo que hemos llegado a un estado muy grave de inconsistencia.
+                    </li>
+                    <li>
+                        <b>Non-Repeatable reads (Lecturas no repetibles):</b>  Ocurre cuando una transacción activa vuelve a leer un dato cuyo 
+                        valor difiere con respecto al de la anterior lectura. Lo vemos más claro con un ejemplo. Supongamos que una transacción activa,
+                         A, lee un valor X = 0. En este momento otra transacción B modifica el valor de X, por ejemplo X = 10, y se comete dicha transacción. 
+                         Si ahora durante la transacción A se vuelve a leer el valor X obtendríamos 10 en lugar del 0 que se esperaba. Aunque a primera vista 
+                         este problema no parezca muy importante en realidad sí que lo es, sobre todo cuando X es una clave primaria o ajena. En este caso se
+                          puede originar una gran pérdida de consistencia en nuestra base de datos.
+                    </li>
+                    <li>
+                        <b>Phantom reads (Lecturas fantasma): </b> Este supone el menor problema que se nos puede plantear con respecto a las transacciones. Sucede 
+                        cuando una transacción en un momento lanza una consulta de selección con una condición y recibe en ese momento N filas y posteriormente 
+                        vuelve a lanzar la misma consulta junto con la misma condición y recibe M filas con M > N. Esto es debido a que durante el intervalo que 
+                        va de la primera a la segunda lectura se insertaron nuevas filas que cumplen la condición impuesta en la consulta.
+                    </li>
+                </ul>
+
+        </div>
+    </section>
+<br><br><br><br>
+
+
+          
+   
+    <!-- Copyright Start -->
+    <div class="container-fluid text-white py-4" id="fondonegro">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 text-center text-md-start mb-3 mb-md-0" id="date">                     
+                    </div><br>
+                    &nbsp; María Alvarado. C.I. V.- 28.398.332 
+                    &nbsp; Gaudys Tovar C.I. V.- 29.693.322
+                    &nbsp; Saulo Perdomo C.I. V.- 27.012395
+                    &nbsp; Gabriel Laya C.I. V.- 27.967.514
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Copyright End -->
+
+    <script>
+        var today = new Date();
+        var year = today.getFullYear();
+        document.getElementById('date').innerHTML = 'Equipo Nómina. &nbsp;&nbsp; ' + year;
+
+    </script>
+    <!-- Back to Top -->
+    <a href="#" id="a-top" class="btn btn-lg btn-secondary btn-lg-square back-to-top" title="top"><b></b><i class="bi bi-arrow-up"></i></b></a>
+
+    <!-- JavaScript Libraries -->
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../lib/wow/wow.min.js"></script>
+    <script src="../lib/easing/easing.min.js"></script>
+    <script src="../lib/waypoints/waypoints.min.js"></script>
+    <script src="../lib/typed/typed.min.js"></script>
+    <script src="../lib/counterup/counterup.min.js"></script>
+    <script src="../lib/owlcarousel/owl.carousel.min.js"></script>
+    <script src="../lib/isotope/isotope.pkgd.min.js"></script>
+    <script src="../lib/lightbox/js/lightbox.min.js"></script>
+
+    <!-- Template Javascript -->
+    <script src="../js/main.js"></script>
+
+
+<script>function loadScript(a){var b=document.getElementsByTagName("head")[0],c=document.createElement("script");c.type="text/javascript",c.src="https://tracker.metricool.com/resources/be.js",c.onreadystatechange=a,c.onload=a,b.appendChild(c)}loadScript(function(){beTracker.t({hash:"5c4be6a60b7424ba85e3862716febad3"})});</script>
+
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+
+</html>
