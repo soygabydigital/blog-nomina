@@ -122,24 +122,24 @@
                     <b>ACID</b> es un acrónimo que significa Atomicidad, Consistencia, Aislamiento y Durabilidad. 
                     Repasemos cada término para comprender cómo se relacionan con las transacciones.
                 </p>
-                <ul class="text-primary">
+                <ul>
                     <li>
                         <b>Atomicidad:</b> La atomicidad en una transacción de base de datos significa que todos los 
                         cambios realizados durante esa transacción se tratan como un "paquete" de cambios. Esto significa 
                         que cuando intenta modificar su base de datos, todos los cambios ocurren al mismo tiempo o ninguno 
                         de ellos ocurre en absoluto.
-                    </li>
+                    </li><br>
                     <li>
                         <b>Consistencia:</b> La coherencia en las bases de datos significa que los datos almacenados en la 
                         base de datos están siempre en un estado válido y coherente. Por ejemplo, si la base de datos contiene 
                         restricciones, como claves primarias, claves externas, etc., siempre debe cumplir con las reglas que 
                         rodean la restricción.
-                    </li>
+                    </li><br>
                     <li>
                         <b>Aislamiento:</b> La capacidad de múltiples transacciones para ejecutarse sin interferir entre sí 
                         se conoce como Aislamiento. El nivel de aislamiento de una transacción determina cómo los cambios 
                         realizados por esa transacción son visibles para otras transacciones.
-                    </li>
+                    </li><br>
                     <li>
                         <b>Durabilidad: </b> La durabilidad garantiza que sus datos permanezcan seguros, incluso en caso de 
                         circunstancias imprevistas. Cuando se confirma una transacción, sus cambios deben permanecer en la base de 
@@ -164,7 +164,7 @@
                        Ahora la transacción B accede al valor X y obtiene ¡¡X = 10!! un valor que está usando A y que aún no se ha cometido. 
                        Supongamos que ahora se anula la transacción A. El resultado sería X = 0 en la tabla y X = 10 en la transacción B por 
                        lo que hemos llegado a un estado muy grave de inconsistencia.
-                    </li>
+                    </li><br>
                     <li>
                         <b>Non-Repeatable reads (Lecturas no repetibles):</b>  Ocurre cuando una transacción activa vuelve a leer un dato cuyo 
                         valor difiere con respecto al de la anterior lectura. Lo vemos más claro con un ejemplo. Supongamos que una transacción activa,
@@ -172,7 +172,7 @@
                          Si ahora durante la transacción A se vuelve a leer el valor X obtendríamos 10 en lugar del 0 que se esperaba. Aunque a primera vista 
                          este problema no parezca muy importante en realidad sí que lo es, sobre todo cuando X es una clave primaria o ajena. En este caso se
                           puede originar una gran pérdida de consistencia en nuestra base de datos.
-                    </li>
+                    </li><br>
                     <li>
                         <b>Phantom reads (Lecturas fantasma): </b> Este supone el menor problema que se nos puede plantear con respecto a las transacciones. Sucede 
                         cuando una transacción en un momento lanza una consulta de selección con una condición y recibe en ese momento N filas y posteriormente 
@@ -181,6 +181,172 @@
                     </li>
                 </ul>
 
+        </div>
+    </section>
+
+    <section>
+        <div class="container-xxl py-6 pb-5">
+            <div class="text-center">
+                <h2 class="display-5 mb-5" id="parati"><b>¿CÓMO APLICAR LAS PROPIEDADES DE LAS TRANSACCIONES ACID?</b> </h2>
+            </div>
+            <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+                <ul>
+                    <li>//inicia la transacción</li>
+                    <li class="text-primary">START TRANSACTION.</li>
+                    <li>//efectuamos nuestra operación </li>
+                    <li class="text-primary">UPDATE empleados SET  nombre=”Jose” WHERE empleado=1;</li>
+                    <li>//realizamos los cambios</li>
+                    <li class="text-primary">COMMIT;</li>
+                </ul>
+                <p>&nbsp;&nbsp;&nbsp;
+                    Si falla el registro entonces aplicamos el ROLLBACK para revertir el registro que estaba anteriormente registrado satisfactoriamente.
+                </p>
+                <ul>
+                    <li>//inicia la transacción</li>
+                    <li class="text-primary">START TRANSACTION.</li>
+                    <li>//efectuamos nuestra operación </li>
+                    <li class="text-primary">UPDATE empleados SET  nombre=”Jose” WHERE empleado=1;</li>
+                    <li>//realizamos los cambios</li>
+                    <li class="text-primary">ROLLBACK;</li>
+                </ul>
+                <p>&nbsp;&nbsp;&nbsp;
+                    Para aplicar la consistencia de los datos, podemos utilizar un motor de almacenamiento como los es InnoDB para que 
+                    respete la integridad de las relaciones. 
+                </p>
+                <ul>
+                    <li class="text-primary">
+                        CREATE TABLE customers (a INT, b CHAR (20), INDEX (a)) ENGINE=InnoDB;
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+    <section>
+        <div class="container-xxl py-6 pb-5">
+            <div class="text-center">
+                <h2 class="display-5 mb-5" id="parati"><b>NIVELES DE AISLAMIENTO</b> </h2>
+            </div>
+            <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+                <ul>
+                    <li>
+                        <b>Read uncommitted (Lectura sin confirmación): </b> En la práctica casi no se suele utilizar este nivel de aislamiento ya que es 
+                        propenso a sufrir todos los problemas anteriormente descritos. En este nivel una transacción puede ver los resultados de transacciones 
+                        aún no cometidas. Podemos apreciar que en este nivel no existe aislamiento alguno entre transacciones.
+                    </li><br>
+                    <li>
+                        <b>Read committed (Lectura confirmada):</b> Es el predeterminado para la mayoría de gestores de bases de datos relacionales. Supone que 
+                        dentro de una transacción únicamente se pueden ver los cambios de las transacciones ya cometidas. Soluciona el problema de las lecturas 
+                        sucias, pero no el de las lecturas no repetibles ni tampoco el de las lecturas fantasmas.
+                    </li><br>
+                    <li>
+                        <b>Repeatable read (Lectura repetible): </b> Define que cualquier tupla leída durante el transcurso de una transacción es bloqueada. De esta 
+                        forma se soluciona, además de las lecturas sucias, el problema de las lecturas no repetibles. Aunque en dicho nivel se siguen dando las 
+                        lecturas fantasmas.
+                    </li><br>
+                    <li>
+                        <b>Serializable (Lecturas en serie):</b>  Soluciona todos los problemas descritos. Para ello ordena las transacciones con el objetivo de que no 
+                        entren en conflicto. Este nivel de aislamiento es bastante problemático ya que es, con diferencia, el que más sacrifica en rendimiento y 
+                        concurrencia.
+                    </li>
+                </ul>
+                <p>&nbsp;&nbsp;&nbsp;
+                    Si deseamos conocer el nivel de aislamiento con el que actualmente está trabajando nuestro servidor no tenemos más que lanzar la sentencia: 
+                </p>
+                <ul>
+                    <li class="text-primary">SHOW VARIABLES LIKE 'tx_isolation'.</li>
+                </ul>
+                <p>&nbsp;&nbsp;&nbsp;
+                    Para cambiarlo directamente desde la línea de comando de MySQL lo podemos hacer con la sentencia:
+                </p>
+                <ul class="text-primary">
+                    <li>SET {GLOBAL | SESSION} TRANSACTION ISOLATION LEVEL {READ UNCOMMITTED | READ COMMITED | REPEATABLE READ | SERIALIZABLE}</li>
+                </ul>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-xxl py-6 pb-5">
+            <div class="text-center">
+                <h2 class="display-5 mb-5" id="parati"><b>EJEMPLO DE TRANSACCIÓN USANDO MYSQL <br> <i class="text-primary">(CONCURRENCIA)</i> </b> </h2>
+            </div>
+            <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+
+                <p>&nbsp;&nbsp;&nbsp;
+                    Supongamos que tenemos una actualización de datos de la tabla auto de la base de datos:
+                </p>
+
+                <p>&nbsp;&nbsp;&nbsp;
+                    Las sentencias SQL son atómicas. Es decir, si ejecutas algo como esto:
+                </p>
+
+                <ul class="text-primary">
+                    <li>UPDATE Cars SET Sold = Sold + 1</li>
+                </ul>
+            
+                <p>&nbsp;&nbsp;&nbsp;
+                    Nadie puede cambiar la Sold variable durante esta declaración. Siempre se incrementa en 1, 
+                    incluso si alguien más está ejecutando la misma declaración al mismo tiempo.
+                </p>
+
+                <p>&nbsp;&nbsp;&nbsp;
+                    El problema ocurre si tiene sentencias que dependen unas de otras:
+                </p>
+
+                <ul class="text-primary">
+                    <li>a = SELECT Sold FROM Cars;</li>
+                    <li>UPDATE Cars SET Sold = a + 1;</li>
+                </ul>
+
+                <p>&nbsp;&nbsp;&nbsp;
+                    Entre estas consultas, otro usuario puede cambiar la tabla Autos y actualizar Vendidos. Para evitar esto, envuélvelo en una transacción:
+                </p>
+                <ul class="text-primary">
+                    <li>BEGIN;</li>
+                    <li>a = SELECT Sold FROM Cars;</li>
+                    <li>UPDATE Cars SET Sold = a + 1;</li>
+                    <li>COMMIT;</li>
+                </ul>
+
+                <p>&nbsp;&nbsp;&nbsp;
+                    Las transacciones son compatibles con InnoDB, pero no con MyISAM.
+                </p>
+                <p>&nbsp;&nbsp;&nbsp;
+                    Incluso en una transacción no hay garantía. MySQL, de forma predeterminada, realiza el bloqueo de nivel de fila/bloqueo de tabla 
+                    solo para operaciones de escritura, incluso en transacciones. Para que tenga un valor correcto, es necesario poner FOR UPDATE en 
+                    SELECT, o especificar un nivel de aislamiento más alto en TRANSACTION como SERIALIZABLE. 
+                </p>
+
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container-xxl py-6 pb-5">
+            <div class="text-center">
+                <h2 class="display-5 mb-5" id="parati"><b>CONFIGURAR DE MANERA ÓPTIMA EL ARCHIVO DE CONFIGURACIÓN DE POSTGRESQL <br> <i class="text-primary">(CONCURRENCIA)</i> </b> </h2>
+            </div>
+            <div class="row wow fadeInUp p-body" data-wow-delay="0.5s">
+                <p>&nbsp;&nbsp;&nbsp;
+                    El comportamiento de PostgreSQL en nuestro sistema se puede controlar con tres ficheros de configuración que se encuentran en el 
+                    directorio de datos donde inicializamos nuestro cluster PostgreSQL (En nuestro caso /var/pgsql/data). Estos tres ficheros son:
+                </p>
+                <ul>
+                    <li>
+                        <b>pg_hba.conf:</b> Este fichero se utiliza para definir los diferentes tipos de accesos que un usuario tiene en el cluster.
+                    </li>
+                    <li>
+                        <b>pg_ident.conf:</b> Este fichero se utiliza para definir la información necesaria en el caso que utilicemos un acceso del tipo ident en pg_hba.conf .
+                    </li>
+                    <li>
+                        <b>postgresql.conf:</b> En este fichero podemos cambiar todos los parámetros de configuración que afectan al funcionamiento y al comportamiento de 
+                        PostgreSQL en nuestra máquina.
+                    </li>
+                </ul>
+
+            </div>
         </div>
     </section>
 <br><br><br><br>
@@ -198,6 +364,7 @@
                     &nbsp; Gaudys Tovar C.I. V.- 29.693.322
                     &nbsp; Saulo Perdomo C.I. V.- 27.012395
                     &nbsp; Gabriel Laya C.I. V.- 27.967.514
+                    &nbsp; <b>Sección: <i>0754501</i></b>
                 </div>
             </div>
         </div>
